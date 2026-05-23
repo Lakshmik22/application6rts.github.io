@@ -1,2 +1,2 @@
 # application6rts.github.io
-Application 6 Github Website
+Application 6 Github Website (Real-Time Systems)
