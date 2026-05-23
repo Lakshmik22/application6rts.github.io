@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Application 6: Theme Park Ride Control System</title>
+  <meta name="description" content="Demo and brief project page for Application 6: Theme Park Ride Control System." />
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --muted:#9aa4b2;
+      --accent:#6ee7b7;
+      --glass: rgba(255,255,255,0.02);
+      --radius:14px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,#071226 0%, #07102a 100%);
+      color:#e6eef6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+      padding:32px;
+      box-sizing:border-box;
+    }
+    .container{
+      max-width:980px;
+      margin:0 auto;
+    }
+    header{
+      display:flex;
+      gap:16px;
+      align-items:center;
+      margin-bottom:22px;
+    }
+    .logo{
+      width:72px;
+      height:72px;
+      border-radius:12px;
+      background:linear-gradient(135deg,var(--accent),#60a5fa);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#012;
+      font-weight:700;
+      box-shadow:0 6px 18px rgba(2,6,23,0.6);
+      flex-shrink:0;
+    }
+    h1{margin:0;font-size:1.6rem}
+    p.lead{margin:6px 0 0;color:var(--muted)}
+    main{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+      border-radius:var(--radius);
+      padding:20px;
+      box-shadow:0 12px 40px rgba(2,6,23,0.6);
+      margin-bottom:20px;
+    }
+    .card{
+      background:var(--card);
+      padding:14px;
+      border-radius:12px;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.02);
+    }
+    .muted{color:var(--muted);font-size:0.95rem}
+    ul{margin:8px 0 0 20px;}
+    .video-wrap{
+      position:relative;
+      padding-bottom:56.25%;
+      height:0;
+      overflow:hidden;
+      border-radius:10px;
+      background:var(--glass);
+    }
+    .video-wrap iframe{
+      position:absolute;
+      top:0;left:0;width:100%;height:100%;border:0;
+    }
+    .links{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+    .btn{
+      display:inline-block;
+      padding:10px 14px;
+      background:transparent;
+      border:1px solid rgba(255,255,255,0.06);
+      border-radius:10px;
+      color:var(--accent);
+      text-decoration:none;
+      font-weight:600;
+      transition:transform .12s ease, box-shadow .12s;
+    }
+    .btn:hover{transform:translateY(-3px);box-shadow:0 8px 26px rgba(0,0,0,0.5)}
+    footer{color:var(--muted);font-size:0.9rem;margin-top:18px;text-align:center}
+    code.inline{background:rgba(255,255,255,0.03);padding:2px 6px;border-radius:6px;color:#bfe6d9}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">A6</div>
+      <div>
+        <h1>Application 6: Theme Park Ride Control System</h1>
+        <p class="lead">A small demo site for the project — contains a short embedded video demo, Wokwi Project link, and short project description.</p>
+      </div>
+    </header>
+
+    <main>
+      <section class="card" aria-labelledby="project-desc">
+        <h2 id="project-desc">Project description</h2>
+       <p class="muted">
+    This project is a real-time system that represents a prototype roller coaster ride control system inspired by Disney attractions. The system consists of three main components: an ultrasonic distance sensor, an emergency stop push button, and multiple LEDs. These components are programmed on an ESP32 microcontroller to work together to ensure a smooth and safe ride experience.
+  </p>
+
+  <p class="muted">
+    The ultrasonic distance sensor detects if any obstacles are near the ride vehicle and, when triggered, alerts the operator by flashing a blue LED. The emergency stop push button immediately halts the ride for three seconds and activates the red LED to indicate a safety stop. Meanwhile, the green LED signals that the ride is operating safely and functioning normally.
+  </p>
+
+  <p class="muted">
+    By using FreeRTOS, the system ensures that all critical tasks meet their deadlines and operate reliably, which is essential for real-time safety-critical applications like ride control systems.
+  </p>
+
+        <div style="margin-top:14px">
+          <strong>Quick highlights</strong>
+          <ul>
+            <li>Simulated ride control using an ESP32 microcontroller (Wokwi simulation).</li>
+            <li>Safety features: emergency stop, distance sensor, and status LEDs.</li>
+            <li>Demo video shows operation of project and visual prototype.</li>
+          </ul>
+        </div>
+
+        <div style="margin-top:16px">
+          <strong>Embedded demo video</strong>
+          <p class="muted" style="margin:6px 0">Watch the short YouTube demo below.</p>
+
+          <div class="video-wrap" role="region" aria-label="Project demo video">
+  <iframe
+    src="https://www.youtube.com/embed/A9m46qbB4Hc"
+    title="Theme Park Ride Control System demo"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+</div>
+
+
+        <div style="margin-top:18px">
+          <strong>Wokwi simulation</strong>
+          <p class="muted" style="margin:6px 0">Interactive simulation used during development:</p>
+          <div class="links">
+            <a class="btn" href="https://wokwi.com/projects/449247448022602753" target="_blank" rel="noopener noreferrer">Open Wokwi Project</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+  </div>
+</body>
+</html>
